@@ -1,0 +1,28 @@
+$small: 300px;
+$medium: 600px;
+
+* {
+    box-sizing: border-box;
+}
+
+.home-grid {
+    margin-bottom: 5%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+
+    @media screen and (max-width: $small) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media screen and (min-width: $medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
