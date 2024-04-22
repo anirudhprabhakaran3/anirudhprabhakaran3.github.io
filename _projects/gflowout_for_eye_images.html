@@ -1,0 +1,96 @@
+---
+layout: project
+title: "Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into
+Machine Learning Models"
+date: 2024-01-21
+---
+
+<div>
+    <h2>Abstract</h2>
+    <p>
+        Ocular diseases, ranging from diabetic retinopathy to glaucoma, present a significant public health challenge
+        due to
+        their prevalence and potential for causing vision
+        impairment. Early and accurate diagnosis is crucial for effective treatment and
+        management.In recent years, deep learning models have emerged as powerful tools
+        for analysing medical images, including ocular imaging . However, challenges
+        persist in model interpretability and uncertainty estimation, which are critical for
+        clinical decision-making. This study introduces a novel application of GFlowOut,
+        leveraging the probabilistic framework of Generative Flow Networks (GFlowNets)
+        to learn the posterior distribution over dropout masks, for the classification and
+        analysis of ocular diseases using eye fundus images. We develop a robust and
+        generalizable method that utilizes GFlowOut integrated with ResNet18 and ViT
+        models as backbone in identifying various ocular conditions. This study employs a
+        unique set of dropout masks - none, random, bottomup, and topdown - to enhance
+        model performance in analyzing ocular images. Our results demonstrate that the
+        bottomup GFlowOut mask significantly improves accuracy, outperforming the
+        traditional dropout approach.
+    </p>
+</div>
+
+<div>
+    <h2>Method</h2>
+    <p>
+        We add learnable probabilistic discrete latent variables into popular vision models. This is done by
+        implementing GFlowOut on ResNet18 and Vision Transformer. Both of these act as the backbone
+        model, and we apply the modifications to the layers. In the ResNet18 model, we remove the normal
+        dropout that is present after every residual block (we do this by setting dropout probability = \( 0 \) ). In
+        place of that, we apply our GFlowOut layer, so that we can apply our dropout. This dropout is done
+        for all 12 residual blocks - however, it can be customized to run on certain blocks, and to be ignored
+        on other blocks. For the Vision Transformer, we apply the dropout after every Attention-MLP block.
+        Similar to the ResNet approach, we set the dropout probability for the normal dropout layers as \( 0 \),
+        and insert our GFlowOut layer.
+    </p>
+    <p>
+        The backbone models were pre-trained ResNet 18 and Vision Transformer. These pre-trained models
+        were trained on the ImageNet dataset, and the final dense layer was fine-tuned to work on the dataset.
+    </p>
+</div>
+
+<div>
+    <h2>Result</h2>
+    <p>
+        We note that in general, the ResNet performs poorer as compared to the Vision Transformer. However,
+        for the same backbone model, we note that the bottomup mask provides the highest accuracy. No
+        mask produces the least accuracy level, and other masks provided better accuracy levels than the
+        random dropout.
+    </p>
+    <p>
+        We also note that in the experiments run with noise, the models with GFlowOut perform better than
+        the normal models. The accuracy of these models are comparable to the case when non-noisy data
+        was used, showing that the model is robust to different types of noise as well
+    </p>
+
+    <p>
+        For complete details, check out the <a href="https://arxiv.org/abs/2402.16865">arXiv preprint</a>.
+    </p>
+</div>
+
+<div>
+    <h2>Figures</h2>
+
+    <div class="centre-row">
+        <figure>
+            <img src="/assets/images/gflowout_for_eye_images/diabetes_1.jpeg" alt="Diabetes Image" height="200px" />
+            <figcaption>Fig.1 - Retinal Image of a Diabetic Patient</figcaption>
+        </figure>
+        <figure>
+            <img src="/assets/images/gflowout_for_eye_images/normal_1.jpeg" alt="Normal Image" height="200px" />
+            <figcaption>Fig.2 - Retinal Image of a Normal Patient</figcaption>
+        </figure>
+    </div>
+
+    <div class="centre-row">
+        <figure>
+            <embed src="/assets/pdf/gflowout_for_eye_images/resnetAcc.pdf" alt="ResNet Accuracy" height="200px" />
+            <figcaption>Fig.3 - ResNet Accuracy</figcaption>
+        </figure>
+
+        <figure>
+            <embed src="/assets/pdf/gflowout_for_eye_images/vitAcc.pdf" alt="ViT Accuracy" height="200px" />
+            <figcaption>Fig.4 - Vision Transformer Accuracy</figcaption>
+        </figure>
+    </div>
+
+
+</div>

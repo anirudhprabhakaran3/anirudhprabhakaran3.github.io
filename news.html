@@ -1,0 +1,21 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+
+<ul>
+    {%- for news in site.news -%}
+        <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <a href="{{ news.url | relative_url }}">
+                {{ news.title | escape }}
+            </a>
+            {%- if news.short -%}
+            - {{ news.short }}
+            {%- endif -%}
+            <br>
+            <span class="post-meta">{{ news.date | date: date_format }}</span>
+        </li>
+    {%- endfor -%}
+</ul>

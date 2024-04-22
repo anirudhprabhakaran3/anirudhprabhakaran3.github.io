@@ -57,5 +57,7 @@ plugins:
 collections:
   news:
     output: true
+  projects:
+    output: true
 
 gems: ["jekyll/scholar"]

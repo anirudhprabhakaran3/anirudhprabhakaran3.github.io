@@ -1,0 +1,123 @@
+---
+layout: project
+title: "Classification of Fever Temperature Patterns using Deep Learning"
+date: 2024-04-22
+---
+
+<div>
+    <h2>Abstract</h2>
+    <p>
+        Tympanic temperature is one of the most fundamental indicators for diagnosis of diseases. In a hospital setting,
+        temperature it is an fundamental metric that tracks a patient's status. Due to its importance, it would be very
+        useful to use temperature data of patients to aid in the diagnostic process. This project aims to leverage
+        temperature data collected from various patients to classify different diseases. We first do a comparative study
+        of various types of models to understand which model architectures independently perform well. After our
+        experiments, we note that using a mixture of architectures produces the best results for our usecase. From the
+        temperature data, extraction of important features is necessary so that the downstream layers only have to
+        consider important features, and not miscellaneous information. This feature extraction is done using two
+        methods - Convolution Neural Networks and Autoencoders. This difference has lead to different models with
+        different architectures. We introduce these three new models for Explainable Temperature analysis -
+        ExTemp-Conv-SM, ExTemp-Conv-LG, and ExTemp-Auto. Along with this, we use explainable AI tools to try to identify
+        distinguishing patterns in temperature fluctuations that can characterize diseases. Using GradCAM, we note the
+        distinct temperature patterns that are unique to particular diseases.
+    </p>
+</div>
+
+<div>
+    <h2>Method</h2>
+    <p>
+        We provide two such models, named <strong>ExTemp-Conv-SM</strong> and <strong>ExTemp-Conv-LG</strong>. Both of
+        these are based on convolution
+        blocks, followed by a fully connected neural network to perform classification. The difference in the two models
+        comes from slight differences in the architecture, leading to a difference in the number of parameters for each
+        model.
+    </p>
+    <p>
+        There has also been previous work to denote that convolution blocks act as an effective method for
+        dimensionality reduction. We explore this idea more, and look at other promising methods for dimensionality
+        reductions. Using the same thought process, we replace the convolution blocks in our proposed network with the
+        encoder block of an autoencoder. This is the motivation behind the third model - <strong>ExTemp-Auto</strong>.
+    </p>
+
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvsm.png" alt="ExTempConvSM Model Architecture">
+        <figcaption>Fig 1. ExTempConvSM Model Architecture</figcaption>
+    </figure>
+
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvlg.png" alt="ExTempConvLG Model Architecture">
+        <figcaption>Fig 2. ExTempConvLG Model Architecture</figcaption>
+    </figure>
+
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempauto.png" alt="ExTempAuto Model Architecture">
+        <figcaption>Fig 3. ExTempAuto Model Architecture</figcaption>
+    </figure>
+</div>
+
+<div>
+    <h2>Results</h2>
+    <p>
+        We note that the best model performance is achieved by the ExTempConvLG model, ( \( 70\% \) ).
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>model</th>
+                <th>precision</th>
+                <th>recall</th>
+                <th>f1-score</th>
+                <th>accuracy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ExTemp-Conv-SM</td>
+                <td>\( 0.62 \)</td>
+                <td>\( 0.55 \)</td>
+                <td>\( 0.62 \)</td>
+                <td>\( 0.65 \)</td>
+            </tr>
+            <tr>
+                <td>ExTemp-Conv-LG</td>
+                <td>\( 0.60 \)</td>
+                <td>\( 0.57 \)</td>
+                <td>\( 0.55 \)</td>
+                <td>\( 0.70 \)</td>
+            </tr>
+            <tr>
+                <td>ExTemp-Auto</td>
+                <td>\( 0.56 \)</td>
+                <td>\( 0.52 \)</td>
+                <td>\( 0.51 \)</td>
+                <td>\( 0.52 \)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        We also apply GradCAM to our models to try to understand which unique tempearture patterns are characteristic
+        for particular diseases. We note these patterns generated from ExTempConvLG.
+    </p>
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvlg_Dengue.png" alt="Temperature Patterns for Dengue">
+        <figcaption>Fig 4. Temperature Captions for Dengue</figcaption>
+    </figure>
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvlg_Non_Infectious_Diseases.png"
+            alt="Temperature Patterns for Non-Infectious Diseases">
+        <figcaption>Fig 5. Temperature Captions for Non-Infectious Diseases</figcaption>
+    </figure>
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvlg_Non_Tubercular_Bacterial_Diseases.png"
+            alt="Temperature Patterns for Non-Tubercular Bacterial Diseases">
+        <figcaption>Fig 6. Temperature Captions for Non-Tubercular Bacterial Diseases</figcaption>
+    </figure>
+    <figure class="centre">
+        <img src="/assets/images/gflowout_for_eye_images/extempconvlg_Tuberculosis.png"
+            alt="Temperature Patterns for Tuberculosis">
+        <figcaption>Fig 7. Temperature Captions for Tuberculosis</figcaption>
+    </figure>
+    <p>
+        The entire report and code can be found <a href="https://github.com/anirudhprabhakaran3/extemp">here</a>.
+    </p>
+</div>

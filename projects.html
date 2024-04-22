@@ -6,13 +6,16 @@ permalink: /projects/
 
 <ul>
     {% for project in site.projects %}
-      <li>
-          <p>
-              <a href="{{ project.url }}">{{ project.title }}</a> 
-              {%- if project.short -%}
-                  - {{ project.short }}
-              {%- endif -%}
-          </p>
-      </li>
+        <li>
+            <p>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <a href="{{ project.url }}">{{ project.title }}</a> 
+                {%- if project.short -%}
+                    - {{ project.short }}
+                {%- endif -%}
+                <br />
+                <span class="post-meta">{{ project.date | date: date_format }}</span>
+            </p>
+        </li>
     {% endfor %}
-  </ul>
+</ul>
