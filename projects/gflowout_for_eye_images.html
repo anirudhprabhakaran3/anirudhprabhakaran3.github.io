@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into Machine Learning Models | Anirudh Prabhakaran</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into Machine Learning Models" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Abstract Ocular diseases, ranging from diabetic retinopathy to glaucoma, present a significant public health challenge due to their prevalence and potential for causing vision impairment. Early and accurate diagnosis is crucial for effective treatment and management.In recent years, deep learning models have emerged as powerful tools for analysing medical images, including ocular imaging . However, challenges persist in model interpretability and uncertainty estimation, which are critical for clinical decision-making. This study introduces a novel application of GFlowOut, leveraging the probabilistic framework of Generative Flow Networks (GFlowNets) to learn the posterior distribution over dropout masks, for the classification and analysis of ocular diseases using eye fundus images. We develop a robust and generalizable method that utilizes GFlowOut integrated with ResNet18 and ViT models as backbone in identifying various ocular conditions. This study employs a unique set of dropout masks - none, random, bottomup, and topdown - to enhance model performance in analyzing ocular images. Our results demonstrate that the bottomup GFlowOut mask significantly improves accuracy, outperforming the traditional dropout approach." />
+<meta property="og:description" content="Abstract Ocular diseases, ranging from diabetic retinopathy to glaucoma, present a significant public health challenge due to their prevalence and potential for causing vision impairment. Early and accurate diagnosis is crucial for effective treatment and management.In recent years, deep learning models have emerged as powerful tools for analysing medical images, including ocular imaging . However, challenges persist in model interpretability and uncertainty estimation, which are critical for clinical decision-making. This study introduces a novel application of GFlowOut, leveraging the probabilistic framework of Generative Flow Networks (GFlowNets) to learn the posterior distribution over dropout masks, for the classification and analysis of ocular diseases using eye fundus images. We develop a robust and generalizable method that utilizes GFlowOut integrated with ResNet18 and ViT models as backbone in identifying various ocular conditions. This study employs a unique set of dropout masks - none, random, bottomup, and topdown - to enhance model performance in analyzing ocular images. Our results demonstrate that the bottomup GFlowOut mask significantly improves accuracy, outperforming the traditional dropout approach." />
+<link rel="canonical" href="https://anirudhprabhakaran3.github.io/projects/gflowout_for_eye_images.html" />
+<meta property="og:url" content="https://anirudhprabhakaran3.github.io/projects/gflowout_for_eye_images.html" />
+<meta property="og:site_name" content="Anirudh Prabhakaran" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-21T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into Machine Learning Models" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-21T00:00:00+00:00","datePublished":"2024-01-21T00:00:00+00:00","description":"Abstract Ocular diseases, ranging from diabetic retinopathy to glaucoma, present a significant public health challenge due to their prevalence and potential for causing vision impairment. Early and accurate diagnosis is crucial for effective treatment and management.In recent years, deep learning models have emerged as powerful tools for analysing medical images, including ocular imaging . However, challenges persist in model interpretability and uncertainty estimation, which are critical for clinical decision-making. This study introduces a novel application of GFlowOut, leveraging the probabilistic framework of Generative Flow Networks (GFlowNets) to learn the posterior distribution over dropout masks, for the classification and analysis of ocular diseases using eye fundus images. We develop a robust and generalizable method that utilizes GFlowOut integrated with ResNet18 and ViT models as backbone in identifying various ocular conditions. This study employs a unique set of dropout masks - none, random, bottomup, and topdown - to enhance model performance in analyzing ocular images. Our results demonstrate that the bottomup GFlowOut mask significantly improves accuracy, outperforming the traditional dropout approach.","headline":"Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into Machine Learning Models","mainEntityOfPage":{"@type":"WebPage","@id":"https://anirudhprabhakaran3.github.io/projects/gflowout_for_eye_images.html"},"url":"https://anirudhprabhakaran3.github.io/projects/gflowout_for_eye_images.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/styles.css"><link type="application/atom+xml" rel="alternate" href="https://anirudhprabhakaran3.github.io/feed.xml" title="Anirudh Prabhakaran" /></head>
+  <body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Anirudh Prabhakaran</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/news/">News</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/publications/">Publications</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Improve Robustness of Eye Disease Detection by including Learnable Probabilistic Discrete Latent Variables into Machine Learning Models</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-01-21T00:00:00+00:00" itemprop="datePublished">Jan 21, 2024
+      </time>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div>
+    <h2>Abstract</h2>
+    <p>
+        Ocular diseases, ranging from diabetic retinopathy to glaucoma, present a significant public health challenge
+        due to
+        their prevalence and potential for causing vision
+        impairment. Early and accurate diagnosis is crucial for effective treatment and
+        management.In recent years, deep learning models have emerged as powerful tools
+        for analysing medical images, including ocular imaging . However, challenges
+        persist in model interpretability and uncertainty estimation, which are critical for
+        clinical decision-making. This study introduces a novel application of GFlowOut,
+        leveraging the probabilistic framework of Generative Flow Networks (GFlowNets)
+        to learn the posterior distribution over dropout masks, for the classification and
+        analysis of ocular diseases using eye fundus images. We develop a robust and
+        generalizable method that utilizes GFlowOut integrated with ResNet18 and ViT
+        models as backbone in identifying various ocular conditions. This study employs a
+        unique set of dropout masks - none, random, bottomup, and topdown - to enhance
+        model performance in analyzing ocular images. Our results demonstrate that the
+        bottomup GFlowOut mask significantly improves accuracy, outperforming the
+        traditional dropout approach.
+    </p>
+</div>
+
+<div>
+    <h2>Method</h2>
+    <p>
+        We add learnable probabilistic discrete latent variables into popular vision models. This is done by
+        implementing GFlowOut on ResNet18 and Vision Transformer. Both of these act as the backbone
+        model, and we apply the modifications to the layers. In the ResNet18 model, we remove the normal
+        dropout that is present after every residual block (we do this by setting dropout probability = \( 0 \) ). In
+        place of that, we apply our GFlowOut layer, so that we can apply our dropout. This dropout is done
+        for all 12 residual blocks - however, it can be customized to run on certain blocks, and to be ignored
+        on other blocks. For the Vision Transformer, we apply the dropout after every Attention-MLP block.
+        Similar to the ResNet approach, we set the dropout probability for the normal dropout layers as \( 0 \),
+        and insert our GFlowOut layer.
+    </p>
+    <p>
+        The backbone models were pre-trained ResNet 18 and Vision Transformer. These pre-trained models
+        were trained on the ImageNet dataset, and the final dense layer was fine-tuned to work on the dataset.
+    </p>
+</div>
+
+<div>
+    <h2>Result</h2>
+    <p>
+        We note that in general, the ResNet performs poorer as compared to the Vision Transformer. However,
+        for the same backbone model, we note that the bottomup mask provides the highest accuracy. No
+        mask produces the least accuracy level, and other masks provided better accuracy levels than the
+        random dropout.
+    </p>
+    <p>
+        We also note that in the experiments run with noise, the models with GFlowOut perform better than
+        the normal models. The accuracy of these models are comparable to the case when non-noisy data
+        was used, showing that the model is robust to different types of noise as well
+    </p>
+
+    <p>
+        For complete details, check out the <a href="https://arxiv.org/abs/2402.16865">arXiv preprint</a>.
+    </p>
+</div>
+
+<div>
+    <h2>Figures</h2>
+
+    <div class="centre-row">
+        <figure>
+            <img src="/assets/images/gflowout_for_eye_images/diabetes_1.jpeg" alt="Diabetes Image" height="200px" />
+            <figcaption>Fig.1 - Retinal Image of a Diabetic Patient</figcaption>
+        </figure>
+        <figure>
+            <img src="/assets/images/gflowout_for_eye_images/normal_1.jpeg" alt="Normal Image" height="200px" />
+            <figcaption>Fig.2 - Retinal Image of a Normal Patient</figcaption>
+        </figure>
+    </div>
+
+    <div class="centre-row">
+        <figure>
+            <embed src="/assets/pdf/gflowout_for_eye_images/resnetAcc.pdf" alt="ResNet Accuracy" height="200px" />
+            <figcaption>Fig.3 - ResNet Accuracy</figcaption>
+        </figure>
+
+        <figure>
+            <embed src="/assets/pdf/gflowout_for_eye_images/vitAcc.pdf" alt="ViT Accuracy" height="200px" />
+            <figcaption>Fig.4 - Vision Transformer Accuracy</figcaption>
+        </figure>
+    </div>
+
+
+</div>
+  </div><a class="u-url" href="/projects/gflowout_for_eye_images.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Anirudh Prabhakaran</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Anirudh Prabhakaran</li><li><a class="u-email" href="mailto:apml2304@gmail.com">apml2304@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li class="social-media-item">
+      <a href="https://github.com/anirudhprabhakaran3">
+        <svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>
+        <span class="username">GitHub</span>
+      </a>
+    </li><li class="social-media-item">
+      <a href="https://www.linkedin.com/in/anirudhprabhakaran">
+        <svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg>
+        <span class="username">LinkedIn</span>
+      </a>
+    </li><li class="social-media-item">
+      <a href="https://www.twitter.com/anirudh23p">
+        <svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg>
+        <span class="username">Twitter</span>
+      </a>
+    </li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Website for Anirudh Prabhakaran. Computer Vision, Deep Learning, Medical Machine Learning</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
