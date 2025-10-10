@@ -1,0 +1,90 @@
+<nav class="flex items-stretch justify-between border-b border-gray-200">
+    <div id="left-nav">
+        <div class="p-5 hover:bg-gray-100 border-r border-gray-200">
+            <a href="/">Anirudh Prabhakaran</a>
+        </div>
+    </div>
+    <div id="right-nav" class="hidden sm:flex">
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="/about">About</a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="/blog">Blog</a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="/research">Research</a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="/work">Work</a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="https://github.com/anirudhprabhakaran3">
+                <i class="fa-brands fa-github fa-xl"></i>
+            </a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="mailto:apml2304@gmail.com">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+            </a>
+        </div>
+        <div class="p-5 hover:bg-gray-100 border-l border-gray-200">
+            <a href="https://scholar.google.com/citations?user=riNesdUAAAAJ&hl=en">
+                <i class="fa-brands fa-google-scholar fa-xl"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="block sm:hidden">
+        <button id="menu-toggle" class="p-5" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fa-solid fa-bars block" id="menu-icon"></i>
+        </button>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="hidden border-y border-gray-200">
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="/about">About</a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="/blog">Blog</a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="/research">Research</a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="/work">Work</a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="https://github.com/anirudhprabhakaran3">
+            <i class="fa-brands fa-github fa-xl"></i>
+        </a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="mailto:apml2304@gmail.com">
+            <i class="fa-solid fa-envelope fa-xl"></i>
+        </a>
+    </div>
+    <div class="p-5 border-r border-gray-200 hover:bg-gray-100">
+        <a href="https://scholar.google.com/citations?user=riNesdUAAAAJ&hl=en">
+            <i class="fa-brands fa-google-scholar fa-xl"></i>
+        </a>
+    </div>
+</div>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('flex');
+        if (isOpen) {
+            mobileMenu.classList.remove("flex");
+            mobileMenu.classList.add("hidden");
+            menuToggle.setAttribute("aria-expanded", "false");
+        } else {
+            mobileMenu.classList.remove("hidden");
+            mobileMenu.classList.add("flex");
+            menuToggle.setAttribute("aria-expanded", "true");
+        }
+    });
+</script>

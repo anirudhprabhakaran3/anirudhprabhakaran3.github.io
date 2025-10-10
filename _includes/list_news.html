@@ -1,0 +1,11 @@
+<ul id="news-list" class="list-disc">
+    {% for item in top_news %}
+    <li>
+        <p>
+            [{{ item.date | date: "%b %d, %Y" }}]
+            <span class="font-bold">{{ item.title }}:</span>
+            {{ item.content | markdownify }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>

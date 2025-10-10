@@ -1,0 +1,18 @@
+<div id="news"
+    class="border border-green-600 bg-green-200 flex flex-col sm:flex-row items-stretch rounded-4xl m-10 p-10">
+    <div id="news-content" class="flex-1 flex flex-col justify-center mx-auto p-5">
+        <h1 class="text-2xl font-bold mb-5">News</h1>
+        {% assign sorted_news = site.news | sort: "date" | reverse %}
+        {% assign top_news = sorted_news | slice: 0, 5 %}
+        {% include list_news.html news_items=top_news %}
+
+        {% if sorted_news.size > 5 %}
+        <p class="mt-5">
+            <a href="/news" class="underline underline-offset-6">
+                View all news
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </p>
+        {% endif %}
+    </div>
+</div>

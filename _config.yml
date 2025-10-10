@@ -1,0 +1,7 @@
+url: "https://anirudhprabhakaran3.github.io"
+baseurl: ""
+title: "Anirudh Prabhakaran"
+
+collections:
+  news:
+    output: false
