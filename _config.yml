@@ -5,3 +5,12 @@ title: "Anirudh Prabhakaran"
 collections:
   news:
     output: false
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+paginate: 1
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-paginate
