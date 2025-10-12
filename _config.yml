@@ -8,6 +8,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  research:
+    output: true
+    permalink: /research/:year/:month/:day/:title/
 
 paginate: 1
 paginate_path: "/blog/page:num/"

@@ -1,0 +1,24 @@
+---
+layout: default
+title: Research
+---
+
+<div id="research-head" class="border-t-2 border-purple-600 mt-5 p-5 sm:mt-10 sm:p-10 rounded-4xl">
+    <h1 class="text-4xl font-bold">Research</h1>
+
+    {% assign sorted_research = site.research | sort: "date" | reverse %}
+
+    <div id="research-list">
+        {% for project in sorted_research %}
+        <a href="{{ project.url }}">
+            <div class="my-5 p-5 bg-purple-100 hover:bg-purple-200 transition-color border border-purple-600 rounded-4xl">
+                <h1 class="text-2xl font-semibold my-2">{{ project.title }}</h1>
+                <h3 class="text-gray-600 text-sm my-2">{{ project.date | date: "%b %d, %Y" }}</h3>
+                <p class="my-2">
+                    {{ project.excerpt | strip_html | truncatewords: 30 }}
+                </p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
