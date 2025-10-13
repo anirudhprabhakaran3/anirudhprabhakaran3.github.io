@@ -2,9 +2,14 @@
 layout: default
 ---
 
-<div
-  class="mt-5 rounded-4xl border-t-2 border-fuchsia-600 p-5 sm:mt-10 sm:p-10"
->
+<div class="mt-5 rounded-t-4xl bg-indigo-600 p-5 text-white sm:mt-10 sm:p-10">
+  <a href="/blog/">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span class="hover:underline hover:underline-offset-6">Back to Blog</span>
+  </a>
+</div>
+
+<div class="p-5 sm:p-10">
   <h1 class="my-2 text-4xl font-bold">{{ page.title }}</h1>
   <h3 class="my-2 text-sm text-gray-600">
     {{ page.date | date: "%B %d, %Y" }}
