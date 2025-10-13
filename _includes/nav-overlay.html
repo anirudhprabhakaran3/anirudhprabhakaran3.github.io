@@ -1,0 +1,50 @@
+<div
+  id="nav-overlay"
+  class="inset-0 z-50 hidden h-screen bg-black text-white duration-700"
+>
+  <div class="fixed right-0">
+    <button
+      id="menu-toggle"
+      class="p-5"
+      aria-label="Toggle menu"
+      aria-expanded="true"
+      onclick="toggleMenu(true)"
+    >
+      <i class="fa-solid fa-xmark block"></i>
+    </button>
+  </div>
+  <div class="flex h-full w-full items-center justify-center text-2xl">
+    <div class="flex flex-col">
+      {% for navlink in site.data.navbar.nav %}
+      <div class="w-full p-5 text-center text-white hover:text-emerald-600">
+        <a href="{{ navlink.url }}"> {{ navlink.name }} </a>
+      </div>
+      {% endfor %}
+      <div class="flex justify-evenly p-5">
+        {% for sociallink in site.data.navbar.social %}
+        <div class="px-5">
+          <a href="{{ sociallink.url }}">
+            <i
+              class="fa-{{ sociallink.pack }} fa-{{ sociallink.name }} fa-lg hover:text-emerald-600"
+            ></i>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlayDiv = document.getElementById("nav-overlay");
+
+  function toggleMenu(currentlyOpen) {
+    if (currentlyOpen) {
+      overlayDiv.classList.remove("fixed");
+      overlayDiv.classList.add("hidden");
+    } else {
+      overlayDiv.classList.remove("hidden");
+      overlayDiv.classList.add("fixed");
+    }
+  }
+</script>
