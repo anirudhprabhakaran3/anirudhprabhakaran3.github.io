@@ -1,0 +1,45 @@
+education:
+  - id: School
+    name: Sardar Patel Vidyalaya
+    degree: All India Senior School Certificate Examination (AISSCE)
+    start: 2016-04-01
+    end: 2020-04-01
+    descriptions:
+      - "Graduated with 97.8%"
+      - "Subjects: Physics, Chemistry, Mathematics, English, Computer Science"
+  - id: Undergraduate
+    name: National Institute of Technology Karnataka, Surathkal
+    degree: B.Tech.
+    start: 2020-12-01
+    end: 2024-05-01
+    descriptions:
+      - "Graduated with a Bachelor of Technology in Electronics and Communication Engineering (ECE) with a Minor in Computer Science Engineering (CSE) with GPA 9.18/10"
+      - "Subjects: Machine Learning, Speech and Audio Processing, Neural Networks and Deep Learning, Pattern Recognition and Machine Learning, Linear Algebra and Probability"
+  - id: Masters
+    name: Institut Polytechnique de Paris
+    degree: M.Sc.
+    start: 2025-09-01
+    end: Present
+    descriptions:
+      - "Pursuing M1 in Data Analysis and Pattern Classification (DATAPAC) at Telecom SudParis, Evry"
+
+workex:
+  - title: Software Engineer 1
+    highlight: true
+    entity: Uber India
+    location: Bangalore
+    start: 2024-06-03
+    end: 2025-08-22
+    descriptions:
+      - "Was a member of the Real-Time Data Processing Platform Team, working with Apache Flink for internal Uber teams."
+      - "Migrated 1000+ jobs from non-secure to secure clusters with zero customer intervention, improving security standards across various data-driven applications."
+      - "Wrote async connectors for Flink and our platform, upgrading to the new Sink v2, optimizing data flow and service interoperability."
+
+  - title: Google Summer of Code Contributor
+    entity: Public Lab
+    location: Remote
+    start: 2022-06-13
+    end: 2022-09-12
+    descriptions:
+      - "Worked with Public Lab on the Ruby on Rails website."
+      - "Deprecated multiple legacy tables and queries on the most commonly used pages, reducing the page load time to upto 50%"
