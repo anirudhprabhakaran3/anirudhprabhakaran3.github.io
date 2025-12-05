@@ -75,7 +75,35 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-featured-posts .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-featured-posts'] = new List('listing-featured-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-all-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-all-posts'] = new List('listing-all-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -218,7 +246,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RXhwbGFpbmFibGUlMjBBSQ==">Explainable AI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R0Zsb3dOZXRz">GFlowNets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVkaWNhbCUyMEFJ">Medical AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="T3BodGhhbG1vbG9neQ==">Ophthalmology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZSUyMFNlcmllcyUyMEFuYWx5c2lz">Time Series Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VW5jZXJ0YWludHklMjBFc3RpbWF0aW9u">Uncertainty Estimation <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RXhwbGFpbmFibGUlMjBBSQ==">Explainable AI <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RmVhdHVyZWQ=">Featured <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R0Zsb3dOZXRz">GFlowNets <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVkaWNhbCUyMEFJ">Medical AI <span class="quarto-category-count">(3)</span></div><div class="category" data-category="T3BodGhhbG1vbG9neQ==">Ophthalmology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGltZSUyMFNlcmllcyUyMEFuYWx5c2lz">Time Series Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VW5jZXJ0YWludHklMjBFc3RpbWF0aW9u">Uncertainty Estimation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -226,15 +254,54 @@ window.Quarto = {
 
 
 
+<section id="featured" class="level2">
+<h2 class="anchored" data-anchor-id="featured">Featured</h2>
+<div id="listing-featured-posts" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="RmVhdHVyZWQlMkNNZWRpY2FsJTIwQUklMkNFeHBsYWluYWJsZSUyMEFJJTJDVGltZSUyMFNlcmllcyUyMEFuYWx5c2lz" data-listing-date-sort="1733958000000" data-listing-file-modified-sort="1764924718290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="379">
+<a href="./projects/fever_temperature_analysis/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="projects/fever_temperature_analysis/extempconvsm.webp" alt="ExTempConv-SM Model" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Fever Temperature Analysis
+</h5>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('RmVhdHVyZWQ='); return false;">Featured</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('TWVkaWNhbCUyMEFJ'); return false;">Medical AI</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('RXhwbGFpbmFibGUlMjBBSQ=='); return false;">Explainable AI</div>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-category" onclick="window.quartoListingCategory('VGltZSUyMFNlcmllcyUyMEFuYWx5c2lz'); return false;">Time Series Analysis</div>
+
+</div>
+<div class="card-text listing-description delink">
+Update: We won the Best Paper Award at the IEEE AICECS 2024!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Anirudh Prabhakaran
+</div>
+<div class="listing-date">
+Dec 12, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="recent-posts" class="level2">
+<h2 class="anchored" data-anchor-id="recent-posts">Recent Posts</h2>
+<div id="listing-all-posts" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+    <select id="listing-all-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-all-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
       <option value="listing-title" data-direction="asc">
@@ -288,7 +355,7 @@ Anirudh Prabhakaran
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TWVkaWNhbCUyMEFJJTJDRXhwbGFpbmFibGUlMjBBSSUyQ1RpbWUlMjBTZXJpZXMlMjBBbmFseXNpcw==" data-listing-date-sort="1733958000000" data-listing-file-modified-sort="1764918954780" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="379">
+<div class="quarto-post image-right" data-index="1" data-categories="RmVhdHVyZWQlMkNNZWRpY2FsJTIwQUklMkNFeHBsYWluYWJsZSUyMEFJJTJDVGltZSUyMFNlcmllcyUyMEFuYWx5c2lz" data-listing-date-sort="1733958000000" data-listing-file-modified-sort="1764924718290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="379">
 <div class="thumbnail"><a href="./projects/fever_temperature_analysis/index.html" class="no-external">
 
 <p class="card-img-top"><img src="projects/fever_temperature_analysis/extempconvsm.webp" alt="ExTempConv-SM Model"  class="thumbnail-image card-img"/></p>
@@ -299,6 +366,8 @@ Anirudh Prabhakaran
 <a href="./projects/fever_temperature_analysis/index.html" class="no-external">Fever Temperature Analysis</a>
 </h3>
 <div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmVhdHVyZWQ='); return false;">Featured</div>
 
 <div class="listing-category" onclick="window.quartoListingCategory('TWVkaWNhbCUyMEFJ'); return false;">Medical AI</div>
 
@@ -324,7 +393,13 @@ Anirudh Prabhakaran
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

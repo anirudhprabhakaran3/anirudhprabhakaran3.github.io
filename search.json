@@ -60,21 +60,35 @@
     "href": "project.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nGFlowNets for Eye Images\n\n\n\nMedical AI\n\nOphthalmology\n\nGFlowNets\n\nUncertainty Estimation\n\n\n\n\n\n\n\n\nJan 13, 2025\n\n\nAnirudh Prabhakaran\n\n\n\n\n\n\n\n\n\n\n\n\nFever Temperature Analysis\n\n\n\nMedical AI\n\nExplainable AI\n\nTime Series Analysis\n\n\n\n\n\n\n\n\n\nDec 12, 2024\n\n\nAnirudh Prabhakaran\n\n\n\n\n\nNo matching items"
+    "text": "Featured\n\nMedical AI\n\nExplainable AI\n\nTime Series Analysis\n\n\n\n\n\n\n\nAnirudh Prabhakaran\n\n\nDec 12, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "project.html#featured",
+    "href": "project.html#featured",
+    "title": "Projects",
+    "section": "",
+    "text": "Featured\n\nMedical AI\n\nExplainable AI\n\nTime Series Analysis\n\n\n\n\n\n\n\nAnirudh Prabhakaran\n\n\nDec 12, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "project.html#recent-posts",
+    "href": "project.html#recent-posts",
+    "title": "Projects",
+    "section": "Recent Posts",
+    "text": "Recent Posts\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n\n\n\n\n\n\n\n\n\n\nGFlowNets for Eye Images\n\n\n\nMedical AI\n\nOphthalmology\n\nGFlowNets\n\nUncertainty Estimation\n\n\n\n\n\n\n\n\nJan 13, 2025\n\n\nAnirudh Prabhakaran\n\n\n\n\n\n\n\n\n\n\n\n\nFever Temperature Analysis\n\n\n\nFeatured\n\nMedical AI\n\nExplainable AI\n\nTime Series Analysis\n\n\n\n\n\n\n\n\n\nDec 12, 2024\n\n\nAnirudh Prabhakaran\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Institut Polytechnique de Paris (IP Paris) | Évry, France M1 Data Analysis and Pattern Classification | Sept 2025 - Present\nNational Institute of Technology Karnataka | Surathkal, India B.Tech in Electronics and Communication Engineering (ECE) with Minors in Computer Science Engineering (CSE) | Dec 2020 - May 2024"
+    "text": "For an exhaustive list, please visit my Europass profile."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About",
-    "section": "",
-    "text": "Institut Polytechnique de Paris (IP Paris) | Évry, France M1 Data Analysis and Pattern Classification | Sept 2025 - Present\nNational Institute of Technology Karnataka | Surathkal, India B.Tech in Electronics and Communication Engineering (ECE) with Minors in Computer Science Engineering (CSE) | Dec 2020 - May 2024"
+    "section": "Education",
+    "text": "Education\nInstitut Polytechnique de Paris (IP Paris) | Évry, France M1 Data Analysis and Pattern Classification | Sept 2025 - Present\nNational Institute of Technology Karnataka | Surathkal, India B.Tech in Electronics and Communication Engineering (ECE) with Minors in Computer Science Engineering (CSE) | Dec 2020 - May 2024"
   },
   {
     "objectID": "about.html#work-experience",
