@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: auto
+
 website:
   description: "Personal Website of Anirudh Prabhakaran"
   site-url: https://anirudhprabhakaran3.github.io

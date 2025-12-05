@@ -2,7 +2,7 @@
 title: "Fever Temperature Analysis"
 date: "2024-12-12"
 author: "Anirudh Prabhakaran"
-categories: ["Medical AI", "Explainable AI", "Time Series Analysis"]
+categories: ["Featured", "Medical AI", "Explainable AI", "Time Series Analysis"]
 ---
 
 Update: We won the Best Paper Award at the IEEE AICECS 2024!
