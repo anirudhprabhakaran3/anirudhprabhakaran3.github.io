@@ -1,0 +1,13 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": []
+  },
+  {
+    "listing": "/project.html",
+    "items": [
+      "/projects/gflownets_for_eye_images/index.html",
+      "/projects/fever_temperature_analysis/index.html"
+    ]
+  }
+]
