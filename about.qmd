@@ -1,0 +1,21 @@
+---
+title: "About"
+about:
+  template: marquee
+---
+
+## Education
+
+Institut Polytechnique de Paris (IP Paris) | Évry, France
+M1 Data Analysis and Pattern Classification | Sept 2025 - Present
+
+National Institute of Technology Karnataka | Surathkal, India
+B.Tech in Electronics and Communication Engineering (ECE) with Minors in Computer Science Engineering (CSE) | Dec 2020 - May 2024
+
+## Work Experience
+
+Uber Ltd. | Bangalore, India
+Software Engineer 1 | Jun 2024 - Aug 2025
+
+Uber Ltd. | Bangalore, India
+Software Engineering Intern | May 2023 - July 2023

@@ -1,0 +1,24 @@
+---
+title: "Anirudh Prabhakaran"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/anirudhprabhkrn
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/anirudhprabhakaran
+    - icon: github
+      text: Github
+      href: https://github.com/anirudhprabhakaran3
+
+---
+
+Hi, I'm Anirudh. I’m an M1 Data Analytics and Pattern Classification (DATAPAC) student at Institut Polytechnique de Paris (IP Paris).
+I’m interested in computer vision, explainability, and its applications in various domains like medical ML.
+
+Currently, I'm working with [Prof. Gianni Franchi](https://giannifranchi.github.io/) on explainability in computer vision. Previously, I was lucky enough to work with [Prof. Dianbo Liu](https://www.cogai4sci.com/), National University of Singapore and [Prof. Min Xu](https://xulabs.github.io/), Carnegie Mellon University.
+
+I'm always open to new opportunities collaborations, or just to say hi! You can reach me either via [email](mailto:apml2304@gmail.com) or any the links given.

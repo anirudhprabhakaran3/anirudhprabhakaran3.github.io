@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  description: "Personal Website of Anirudh Prabhakaran"
+  site-url: https://anirudhprabhakaran3.github.io
+  title: "Anirudh Prabhakaran"
+  twitter-card:
+    creator: "@anirudhprabhkrn"
+    site: "@anirudhprabhkrn"
+  open-graph:
+    locale: en_US
+    site-name: Anirudh Prabhakaran
+  navbar:
+    background: primary
+    right:
+      - project.qmd
+      - blog.qmd
+      - about.qmd
+  cookie-consent:
+    type: express
+    style: simple
+    palette: light
+
+format:
+  html:
+    theme:
+      - pulse
+    css: styles.css
