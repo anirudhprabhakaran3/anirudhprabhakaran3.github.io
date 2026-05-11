@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Anirudh Prabhakaran",
     "section": "",
-    "text": "Hi, I’m Anirudh. I’m an M1 Data Analytics and Pattern Classification (DATAPAC) student at Institut Polytechnique de Paris (IP Paris). I am interested in Computer Vision, with a specific focus on Explainability and Bio-Inspired Efficiency.\nCurrently, I’m working with Prof. Gianni Franchi on explainability in computer vision. Previously, I was lucky enough to work with Prof. Dianbo Liu, National University of Singapore and Prof. Min Xu, Carnegie Mellon University.\nI’m always open to new opportunities collaborations, or just to say hi! You can reach me either via email or any the links given."
+    "text": "Hi, I’m Anirudh! I’m a Master’s student at Institut Polytechnique de Paris (IP Paris).\nMy research focuses on NeuroAI and Biologically Plausible Learning. Specifically, I am interested in how biological brains manage state and memory to learn continuously, and how we can build artifical architectures (like Complementary Learning Systems) that don’t suffer from catastrophic forgetting.\nI come from a heavy software engineering background, having previously built petabyte-scale real-time distributed systems at Uber. Currently, I am applying this systems-level thinking to brain-inspired algorithms in JAX. Currently, I’m working with Prof. Gianni Franchi on explainability in Computer Vision.\nI’m always open to new opportunities, collaborations, or discussing alternatives to backpropagation. You can reach me via email or any of the links given."
   },
   {
     "objectID": "blog.html",
