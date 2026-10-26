@@ -1,13 +1,16 @@
 [
   {
-    "listing": "/blog.html",
-    "items": []
+    "listing": "/research.html",
+    "items": [
+      "/research/gflownets_for_eye_images/index.html",
+      "/research/fever_temperature_analysis/index.html"
+    ]
   },
   {
-    "listing": "/project.html",
+    "listing": "/engineering.html",
     "items": [
-      "/projects/fever_temperature_analysis/index.html",
-      "/projects/gflownets_for_eye_images/index.html"
+      "/engineering/uber-swe/index.html",
+      "/engineering/uber-intern/index.html"
     ]
   }
 ]

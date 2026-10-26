@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://anirudhprabhakaran3.github.io/engineering/uber-intern/index.html</loc>
+    <lastmod>2026-10-26T09:35:08.730Z</lastmod>
+  </url>
+  <url>
     <loc>https://anirudhprabhakaran3.github.io/index.html</loc>
-    <lastmod>2026-05-11T18:44:49.342Z</lastmod>
+    <lastmod>2026-10-26T09:30:11.367Z</lastmod>
   </url>
   <url>
-    <loc>https://anirudhprabhakaran3.github.io/blog.html</loc>
-    <lastmod>2025-12-05T07:15:54.762Z</lastmod>
+    <loc>https://anirudhprabhakaran3.github.io/research.html</loc>
+    <lastmod>2026-10-26T09:33:11.593Z</lastmod>
   </url>
   <url>
-    <loc>https://anirudhprabhakaran3.github.io/projects/fever_temperature_analysis/index.html</loc>
+    <loc>https://anirudhprabhakaran3.github.io/research/fever_temperature_analysis/index.html</loc>
     <lastmod>2025-12-05T08:51:58.290Z</lastmod>
   </url>
   <url>
-    <loc>https://anirudhprabhakaran3.github.io/projects/gflownets_for_eye_images/index.html</loc>
+    <loc>https://anirudhprabhakaran3.github.io/research/gflownets_for_eye_images/index.html</loc>
     <lastmod>2025-12-05T07:15:54.785Z</lastmod>
   </url>
   <url>
-    <loc>https://anirudhprabhakaran3.github.io/project.html</loc>
-    <lastmod>2025-12-05T08:54:21.301Z</lastmod>
+    <loc>https://anirudhprabhakaran3.github.io/about.html</loc>
+    <lastmod>2026-10-26T09:28:55.790Z</lastmod>
   </url>
   <url>
-    <loc>https://anirudhprabhakaran3.github.io/about.html</loc>
-    <lastmod>2025-12-05T07:22:01.765Z</lastmod>
+    <loc>https://anirudhprabhakaran3.github.io/engineering.html</loc>
+    <lastmod>2026-10-26T09:33:18.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anirudhprabhakaran3.github.io/engineering/uber-swe/index.html</loc>
+    <lastmod>2026-10-26T09:34:47.423Z</lastmod>
   </url>
 </urlset>
